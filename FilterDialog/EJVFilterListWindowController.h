@@ -15,6 +15,7 @@ extern NSString * const kEJVFilterListPredicateSubstitutionVariableName;
 @interface EJVFilterListWindowController : NSWindowController
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
+                        filterPredicate:(NSPredicate *)filterPredicate
                               cellClass:(nullable Class)cellClass
                                 cellNib:(nullable NSNib *)cellNib;
 

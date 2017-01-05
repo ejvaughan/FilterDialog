@@ -17,6 +17,7 @@
 		AAAEED751E1EBF41004ABFAE /* EJVSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6D1E1EBF41004ABFAE /* EJVSearchField.m */; };
 		AAAEED761E1EBF41004ABFAE /* EJVTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */; };
 		AAAEED771E1EBF41004ABFAE /* EJVTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */; };
+		AAAEED8C1E1EC4B7004ABFAE /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableView.m; sourceTree = "<group>"; };
 		AAAEED701E1EBF41004ABFAE /* EJVTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVTableRowView.h; sourceTree = "<group>"; };
 		AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableRowView.m; sourceTree = "<group>"; };
+		AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableCell.xib; path = FilterDialog/TableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				AAAEED571E1EBF21004ABFAE /* AppDelegate.m */,
 				AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */,
 				AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */,
+				AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */,
 				AAAEED611E1EBF21004ABFAE /* Info.plist */,
 				AAAEED591E1EBF21004ABFAE /* Supporting Files */,
 			);
@@ -169,6 +172,7 @@
 			files = (
 				AAAEED731E1EBF41004ABFAE /* EJVFilterListWindowController.xib in Resources */,
 				AAAEED5D1E1EBF21004ABFAE /* Assets.xcassets in Resources */,
+				AAAEED8C1E1EC4B7004ABFAE /* TableCell.xib in Resources */,
 				AAAEED601E1EBF21004ABFAE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

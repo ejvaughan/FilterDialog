@@ -30,6 +30,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 @implementation EJVFilterListWindowController
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
+                        filterPredicate:(NSPredicate *)filterPredicate
                               cellClass:(Class)cellClass
                                 cellNib:(NSNib *)cellNib
 {
@@ -51,15 +52,13 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
         _arrayController = controller;
         _cellNib = cellNib;
         _cellClass = cellClass;
-        _filterPredicateTemplate = controller.filterPredicate;
+        _filterPredicateTemplate = filterPredicate;
         _rowHeight = 44.0;
         
         [_arrayController addObserver:self
                            forKeyPath:@"arrangedObjects"
                               options:NSKeyValueObservingOptionNew
                               context:NULL];
-        
-        [self updateFilterPredicateForText:@""];
     }
     
     return self;
