@@ -21,8 +21,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 @property (weak) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
 
 @property (strong) NSArrayController *arrayController;
-@property (strong) NSNib *cellNib;
-@property (strong) Class cellClass;
+@property (strong) NSTableCellView *(^cellViewBlock)(NSTableCellView *, id);
 @property (strong) NSPredicate *filterPredicateTemplate;
 
 @end
@@ -31,29 +30,15 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
                         filterPredicate:(NSPredicate *)filterPredicate
-                              cellClass:(Class)cellClass
-                                cellNib:(NSNib *)cellNib
+                          cellViewBlock:(NSTableCellView *(^)(NSTableCellView *reusingView, id object))cellViewBlock
 {
-    if (cellClass == nil && cellNib == nil) {
-        [[NSException exceptionWithName:NSInvalidArgumentException
-                                 reason:@"cellClass or cellNib must be set!"
-                               userInfo:nil] raise];
-    }
-    
-    if (cellClass && ![cellClass isSubclassOfClass:[NSTableCellView class]]) {
-        [[NSException exceptionWithName:NSInvalidArgumentException
-                                 reason:@"cellClass must be a descendant of NSTableCellView"
-                               userInfo:nil] raise];
-    }
-    
     self = [super initWithWindowNibName:@"EJVFilterListWindowController"];
     
     if (self) {
         _arrayController = controller;
-        _cellNib = cellNib;
-        _cellClass = cellClass;
         _filterPredicateTemplate = filterPredicate;
         _rowHeight = 44.0;
+        _cellViewBlock = cellViewBlock;
         
         [_arrayController addObserver:self
                            forKeyPath:@"arrangedObjects"
@@ -93,10 +78,6 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
     self.tableView.action = @selector(tableViewCellSelected:);
     
     self.tableView.rowHeight = self.rowHeight;
-    
-    if (self.cellNib) {
-        [self.tableView registerNib:self.cellNib forIdentifier:kFilterListCellIdentifier];
-    }
     
     // Set up bindings for table view
     [self.tableView bind:NSContentBinding
@@ -171,10 +152,11 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     NSTableCellView *cell = [tableView makeViewWithIdentifier:tableColumn.identifier owner:nil];
+    id object = [self.arrayController.arrangedObjects objectAtIndex:row];
+    cell = self.cellViewBlock(cell, object);
     
-    if (cell == nil && self.cellClass) {
-        cell = [[self.cellClass alloc] initWithFrame:NSZeroRect];
-    }
+    // Set the reuse identifier
+    cell.identifier = tableColumn.identifier;
     
     return cell;
 }

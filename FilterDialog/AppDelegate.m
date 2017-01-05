@@ -43,8 +43,20 @@
     [[EJVFilterListWindowController alloc]
      initWithArrayController:arrayController
      filterPredicate:filterPredicate
-     cellClass:nil
-     cellNib:[[NSNib alloc] initWithNibNamed:@"TableCell" bundle:nil]];
+     cellViewBlock:^NSTableCellView * _Nonnull(NSTableCellView * _Nullable reusingView, id  _Nonnull object) {
+         if (reusingView) {
+             return reusingView;
+         }
+         
+         NSNib *nib = [[NSNib alloc] initWithNibNamed:@"TableCell" bundle:nil];
+         
+         NSArray *views = nil;
+         [nib instantiateWithOwner:nil topLevelObjects:&views];
+         
+         return views[[views indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+             return [obj isKindOfClass:[NSTableCellView class]];
+         }]];
+     }];
 }
 
 - (IBAction)openDialog:(id)sender

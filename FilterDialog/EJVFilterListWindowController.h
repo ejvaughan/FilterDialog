@@ -16,14 +16,13 @@ extern NSString * const kEJVFilterListPredicateSubstitutionVariableName;
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
                         filterPredicate:(NSPredicate *)filterPredicate
-                              cellClass:(nullable Class)cellClass
-                                cellNib:(nullable NSNib *)cellNib;
+                          cellViewBlock:(NSTableCellView *(^)(NSTableCellView * _Nullable reusingView, id object))cellViewBlock;
 
 // Default value: 44.0
 @property (nonatomic) CGFloat rowHeight;
 
-@property (weak) id target;
-@property SEL selectionCommittedAction;
+@property (nullable, weak) id target;
+@property (nullable) SEL selectionCommittedAction;
 
 @end
 
