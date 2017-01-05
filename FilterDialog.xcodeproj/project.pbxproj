@@ -11,16 +11,33 @@
 		AAAEED5B1E1EBF21004ABFAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED5A1E1EBF21004ABFAE /* main.m */; };
 		AAAEED5D1E1EBF21004ABFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */; };
 		AAAEED601E1EBF21004ABFAE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */; };
+		AAAEED721E1EBF41004ABFAE /* EJVFilterListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED681E1EBF41004ABFAE /* EJVFilterListWindowController.m */; };
+		AAAEED731E1EBF41004ABFAE /* EJVFilterListWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED691E1EBF41004ABFAE /* EJVFilterListWindowController.xib */; };
+		AAAEED741E1EBF41004ABFAE /* EJVSearchPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6B1E1EBF41004ABFAE /* EJVSearchPanel.m */; };
+		AAAEED751E1EBF41004ABFAE /* EJVSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6D1E1EBF41004ABFAE /* EJVSearchField.m */; };
+		AAAEED761E1EBF41004ABFAE /* EJVTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */; };
+		AAAEED771E1EBF41004ABFAE /* EJVTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AAAEED531E1EBF21004ABFAE /* FilterDialog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterDialog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAAEED561E1EBF21004ABFAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AAAEED571E1EBF21004ABFAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAAEED561E1EBF21004ABFAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FilterDialog/AppDelegate.h; sourceTree = "<group>"; };
+		AAAEED571E1EBF21004ABFAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FilterDialog/AppDelegate.m; sourceTree = "<group>"; };
 		AAAEED5A1E1EBF21004ABFAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FilterDialog/Assets.xcassets; sourceTree = "<group>"; };
 		AAAEED5F1E1EBF21004ABFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		AAAEED611E1EBF21004ABFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAAEED611E1EBF21004ABFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FilterDialog/Info.plist; sourceTree = "<group>"; };
+		AAAEED671E1EBF41004ABFAE /* EJVFilterListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVFilterListWindowController.h; sourceTree = "<group>"; };
+		AAAEED681E1EBF41004ABFAE /* EJVFilterListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVFilterListWindowController.m; sourceTree = "<group>"; };
+		AAAEED691E1EBF41004ABFAE /* EJVFilterListWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EJVFilterListWindowController.xib; sourceTree = "<group>"; };
+		AAAEED6A1E1EBF41004ABFAE /* EJVSearchPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVSearchPanel.h; sourceTree = "<group>"; };
+		AAAEED6B1E1EBF41004ABFAE /* EJVSearchPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVSearchPanel.m; sourceTree = "<group>"; };
+		AAAEED6C1E1EBF41004ABFAE /* EJVSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVSearchField.h; sourceTree = "<group>"; };
+		AAAEED6D1E1EBF41004ABFAE /* EJVSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVSearchField.m; sourceTree = "<group>"; };
+		AAAEED6E1E1EBF41004ABFAE /* EJVTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVTableView.h; sourceTree = "<group>"; };
+		AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableView.m; sourceTree = "<group>"; };
+		AAAEED701E1EBF41004ABFAE /* EJVTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVTableRowView.h; sourceTree = "<group>"; };
+		AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableRowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				AAAEED551E1EBF21004ABFAE /* FilterDialog */,
+				AAAEED781E1EBF4A004ABFAE /* Demo */,
 				AAAEED541E1EBF21004ABFAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,12 +71,17 @@
 		AAAEED551E1EBF21004ABFAE /* FilterDialog */ = {
 			isa = PBXGroup;
 			children = (
-				AAAEED561E1EBF21004ABFAE /* AppDelegate.h */,
-				AAAEED571E1EBF21004ABFAE /* AppDelegate.m */,
-				AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */,
-				AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */,
-				AAAEED611E1EBF21004ABFAE /* Info.plist */,
-				AAAEED591E1EBF21004ABFAE /* Supporting Files */,
+				AAAEED671E1EBF41004ABFAE /* EJVFilterListWindowController.h */,
+				AAAEED681E1EBF41004ABFAE /* EJVFilterListWindowController.m */,
+				AAAEED691E1EBF41004ABFAE /* EJVFilterListWindowController.xib */,
+				AAAEED6A1E1EBF41004ABFAE /* EJVSearchPanel.h */,
+				AAAEED6B1E1EBF41004ABFAE /* EJVSearchPanel.m */,
+				AAAEED6C1E1EBF41004ABFAE /* EJVSearchField.h */,
+				AAAEED6D1E1EBF41004ABFAE /* EJVSearchField.m */,
+				AAAEED6E1E1EBF41004ABFAE /* EJVTableView.h */,
+				AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */,
+				AAAEED701E1EBF41004ABFAE /* EJVTableRowView.h */,
+				AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */,
 			);
 			path = FilterDialog;
 			sourceTree = "<group>";
@@ -69,6 +92,20 @@
 				AAAEED5A1E1EBF21004ABFAE /* main.m */,
 			);
 			name = "Supporting Files";
+			path = FilterDialog;
+			sourceTree = "<group>";
+		};
+		AAAEED781E1EBF4A004ABFAE /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				AAAEED561E1EBF21004ABFAE /* AppDelegate.h */,
+				AAAEED571E1EBF21004ABFAE /* AppDelegate.m */,
+				AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */,
+				AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */,
+				AAAEED611E1EBF21004ABFAE /* Info.plist */,
+				AAAEED591E1EBF21004ABFAE /* Supporting Files */,
+			);
+			name = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAEED731E1EBF41004ABFAE /* EJVFilterListWindowController.xib in Resources */,
 				AAAEED5D1E1EBF21004ABFAE /* Assets.xcassets in Resources */,
 				AAAEED601E1EBF21004ABFAE /* MainMenu.xib in Resources */,
 			);
@@ -142,7 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAEED721E1EBF41004ABFAE /* EJVFilterListWindowController.m in Sources */,
+				AAAEED771E1EBF41004ABFAE /* EJVTableRowView.m in Sources */,
+				AAAEED761E1EBF41004ABFAE /* EJVTableView.m in Sources */,
 				AAAEED5B1E1EBF21004ABFAE /* main.m in Sources */,
+				AAAEED751E1EBF41004ABFAE /* EJVSearchField.m in Sources */,
+				AAAEED741E1EBF41004ABFAE /* EJVSearchPanel.m in Sources */,
 				AAAEED581E1EBF21004ABFAE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +199,7 @@
 				AAAEED5F1E1EBF21004ABFAE /* Base */,
 			);
 			name = MainMenu.xib;
+			path = FilterDialog;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
