@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EJVFilterListWindowController.h"
-//#import "EJVHighlightingTextField.h"
+#import "EJVHighlightingTextField.h"
 
 @interface AppDelegate ()
 
@@ -58,10 +58,10 @@
              return [obj isKindOfClass:[NSTableCellView class]];
          }]];
          
-//         [view.textField bind:@"searchString"
-//                     toObject:self.filterDialog
-//                  withKeyPath:@"searchText"
-//                      options:nil];
+         [view.textField bind:@"searchString"
+                     toObject:self.filterDialog
+                  withKeyPath:@"searchText"
+                      options:nil];
          
          return view;
      }];
