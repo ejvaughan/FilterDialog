@@ -13,11 +13,10 @@
             <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-Ms-V2v" customClass="EJVHighlightingTextField">
-                    <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-Ms-V2v" customClass="EJVHighlightingTextField">
+                    <rect key="frame" x="8" y="0.0" width="97" height="17"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="50V-Uy-pg4" customClass="EJVHighlightingTextFieldCell">
-                        <font key="font" metaFont="systemBold"/>
+                        <font key="font" metaFont="system"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -26,6 +25,10 @@
                     </connections>
                 </textField>
             </subviews>
+            <constraints>
+                <constraint firstItem="ByC-Ms-V2v" firstAttribute="leading" secondItem="BYa-04-hKk" secondAttribute="leading" constant="10" id="LWG-0q-oHI"/>
+                <constraint firstItem="ByC-Ms-V2v" firstAttribute="centerY" secondItem="BYa-04-hKk" secondAttribute="centerY" id="eJu-wQ-Xe2"/>
+            </constraints>
             <connections>
                 <outlet property="textField" destination="ByC-Ms-V2v" id="mJZ-3U-CFA"/>
             </connections>
