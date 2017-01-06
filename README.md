@@ -43,7 +43,7 @@ The following example shows how to create a dialog and display it:
     // Display the dialog
     [self.dialog.window makeKeyAndOrderFront:nil];
 
-When the user select's a cell (either by pressing the enter key or clicking on a cell), an action message will be sent to the dialog's target. The action message is specified in the `selectionCommittedAction` property. To get the selected object, use the -selectedObjects property of the array controller that was initially supplied to the dialog. For example:
+When the user select's a cell (either by pressing the enter key or clicking on a cell), an action message will be sent to the dialog's target. The action message is specified in the `selectionCommittedAction` property. To get the selected object, use the `selectedObjects` property of the array controller that was initially supplied to the dialog. For example:
 
     // When the dialog is created
     self.dialog.target = self;
@@ -57,7 +57,7 @@ When the user select's a cell (either by pressing the enter key or clicking on a
         NSLog(@"You selected: %@", selection);
     }
 
-Because the user's selection is bound to the array controller, is possible to observe the array controller's -selectedObjects or -selectionIndex property to get notified when the selection changes. Note, however, that you will be notified even when the user uses the up/down keys to change the highlighted row (which does not send the `selectionCommittedAction` message). This difference in behavior could be used, for example, to provide a preview of an item that is highlighted, before committing the selection by pressing the enter key.
+Because the user's selection is bound to the array controller, is possible to observe the array controller's `selectedObjects` or `selectionIndex` property to get notified when the selection changes. Note, however, that you will be notified even when the user uses the up/down keys to change the highlighted row (which does not send the `selectionCommittedAction` message). This difference in behavior could be used, for example, to provide a preview of an item that is highlighted, before committing the selection by pressing the enter key.
 
 ## Demo app
 
