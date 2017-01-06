@@ -85,3 +85,13 @@ When the user types into the dialog's search field, the text is used to construc
 
 The relevant files for the demo are AppDelegate.m and TableCell.xib.
 
+## Including in your own project
+
+Although `EJVFilterListWindowController` is the only class you will be using, it relies on some auxiliary classes, as well as a xib, which must all be included in your project. These files are:
+
+* EJVFilterListWindowController.h/.m/.xib
+* EJVSearchPanel.h/.m
+* EJVSearchField.h/.m
+* EJVTableView.h/.m
+* EJVTableRowView.h/.m
+
