@@ -10,8 +10,6 @@
 #import "EJVTableRowView.h"
 #import "EJVTableView.h"
 
-NSString * const kEJVFilterListPredicateSubstitutionVariableName = @"TEXT";
-
 static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 @interface EJVFilterListWindowController () <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
@@ -22,21 +20,21 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 @property (strong) NSArrayController *arrayController;
 @property (strong) NSTableCellView *(^cellViewBlock)(NSTableCellView *, id);
-@property (strong) NSPredicate *filterPredicateTemplate;
+@property (strong) NSPredicate *(^filterPredicateBlock)(NSString *);
 
 @end
 
 @implementation EJVFilterListWindowController
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
-                        filterPredicate:(NSPredicate *)filterPredicate
+                   filterPredicateBlock:(NSPredicate *(^)(NSString *searchText))filterPredicateBlock
                           cellViewBlock:(NSTableCellView *(^)(NSTableCellView *reusingView, id object))cellViewBlock
 {
     self = [super initWithWindowNibName:@"EJVFilterListWindowController"];
     
     if (self) {
         _arrayController = controller;
-        _filterPredicateTemplate = filterPredicate;
+        _filterPredicateBlock = filterPredicateBlock;
         _rowHeight = 44.0;
         _cellViewBlock = cellViewBlock;
         
@@ -111,8 +109,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 - (void)updateFilterPredicateForText:(NSString *)text
 {
-    self.arrayController.filterPredicate = ([text length] == 0) ? nil :
-    [self.filterPredicateTemplate predicateWithSubstitutionVariables:@{ kEJVFilterListPredicateSubstitutionVariableName : text }];
+    self.arrayController.filterPredicate = ([text length] == 0) ? nil : self.filterPredicateBlock(text);
 }
 
 - (IBAction)searchFieldTextDidChange:(NSSearchField *)sender

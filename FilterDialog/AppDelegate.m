@@ -32,18 +32,16 @@
               withKeyPath:@"stuff"
                   options:nil];
     
-    // Set up a filter predicate to drive searching
-    // A special substitution variable is replaced with the search text
-    NSPredicate *filterPredicate =
-    [NSPredicate predicateWithFormat:
-     [NSString stringWithFormat:
-      @"self contains[cd] $%@",
-      kEJVFilterListPredicateSubstitutionVariableName]];
-    
     self.filterDialog =
     [[EJVFilterListWindowController alloc]
      initWithArrayController:arrayController
-     filterPredicate:filterPredicate
+     filterPredicateBlock:^NSPredicate * _Nonnull(NSString * _Nonnull searchText) {
+         NSMutableString *fuzzySearch = [NSMutableString stringWithString:@"*"];
+         [searchText enumerateSubstringsInRange:NSMakeRange(0, [searchText length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+             [fuzzySearch appendFormat:@"%@*", substring];
+         }];
+         return [NSPredicate predicateWithFormat:@"self like[cd] %@", fuzzySearch];
+     }
      cellViewBlock:^NSTableCellView * _Nonnull(NSTableCellView * _Nullable reusingView, id  _Nonnull object) {
          if (reusingView) {
              return reusingView;

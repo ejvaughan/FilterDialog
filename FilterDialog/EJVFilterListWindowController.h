@@ -10,12 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern NSString * const kEJVFilterListPredicateSubstitutionVariableName;
-
 @interface EJVFilterListWindowController : NSWindowController
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
-                        filterPredicate:(NSPredicate *)filterPredicate
+                   filterPredicateBlock:(NSPredicate *(^)(NSString * searchText))filterPredicateBlock
                           cellViewBlock:(NSTableCellView *(^)(NSTableCellView * _Nullable reusingView, id object))cellViewBlock;
 
 // Default value: 44.0
