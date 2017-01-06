@@ -14,6 +14,7 @@
 
 @property (weak) IBOutlet NSWindow *window;
 @property (strong) NSArray<NSString *> *stuff;
+@property (strong) NSArrayController *arrayController;
 @property (strong) EJVFilterListWindowController *filterDialog;
 
 @end
@@ -26,15 +27,15 @@
     self.stuff = @[ @"Hello", @"Foo", @"Bar", @"Baz", @"World" ];
     
     // Create the array controller that will supply data to the filter dialog
-    NSArrayController *arrayController = [[NSArrayController alloc] init];
-    [arrayController bind:NSContentArrayBinding
-                 toObject:self
-              withKeyPath:@"stuff"
-                  options:nil];
+    self.arrayController = [[NSArrayController alloc] init];
+    [self.arrayController bind:NSContentArrayBinding
+                      toObject:self
+                   withKeyPath:@"stuff"
+                       options:nil];
     
     self.filterDialog =
     [[EJVFilterListWindowController alloc]
-     initWithArrayController:arrayController
+     initWithArrayController:self.arrayController
      filterPredicateBlock:^NSPredicate * _Nonnull(NSString * _Nonnull searchText) {
          NSMutableString *fuzzySearch = [NSMutableString stringWithString:@"*"];
          [searchText enumerateSubstringsInRange:NSMakeRange(0, [searchText length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
@@ -65,6 +66,17 @@
          
          return view;
      }];
+    
+    self.filterDialog.target = self;
+    self.filterDialog.selectionCommittedAction = @selector(filterDialogDidSelectRow:);
+}
+
+- (void)filterDialogDidSelectRow:(EJVFilterListWindowController *)sender
+{
+    // Get the selected object from the array controller
+    NSString *selection = [[self.arrayController selectedObjects] firstObject];
+    
+    NSLog(@"You selected: %@", selection);
 }
 
 - (IBAction)openDialog:(id)sender
