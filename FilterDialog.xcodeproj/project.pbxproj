@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AAAEED581E1EBF21004ABFAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED571E1EBF21004ABFAE /* AppDelegate.m */; };
-		AAAEED5B1E1EBF21004ABFAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED5A1E1EBF21004ABFAE /* main.m */; };
 		AAAEED5D1E1EBF21004ABFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */; };
-		AAAEED601E1EBF21004ABFAE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */; };
 		AAAEED721E1EBF41004ABFAE /* EJVFilterListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED681E1EBF41004ABFAE /* EJVFilterListWindowController.m */; };
 		AAAEED731E1EBF41004ABFAE /* EJVFilterListWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED691E1EBF41004ABFAE /* EJVFilterListWindowController.xib */; };
 		AAAEED741E1EBF41004ABFAE /* EJVSearchPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6B1E1EBF41004ABFAE /* EJVSearchPanel.m */; };
@@ -18,17 +16,17 @@
 		AAAEED761E1EBF41004ABFAE /* EJVTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */; };
 		AAAEED771E1EBF41004ABFAE /* EJVTableRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */; };
 		AAAEED8C1E1EC4B7004ABFAE /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */; };
-		AAAEEDD71E1F81BC004ABFAE /* EJVHighlightingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEEDD61E1F81BC004ABFAE /* EJVHighlightingTextField.m */; };
+		AAAEEDDA1E1FB687004ABFAE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAEEDD81E1FB687004ABFAE /* MainMenu.xib */; };
+		AAAEEDDD1E1FB736004ABFAE /* EJVHighlightingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEEDDC1E1FB736004ABFAE /* EJVHighlightingTextField.m */; };
+		AAAEEDDF1E1FB77D004ABFAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAEEDDE1E1FB77D004ABFAE /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AAAEED531E1EBF21004ABFAE /* FilterDialog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterDialog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAAEED561E1EBF21004ABFAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FilterDialog/AppDelegate.h; sourceTree = "<group>"; };
-		AAAEED571E1EBF21004ABFAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FilterDialog/AppDelegate.m; sourceTree = "<group>"; };
-		AAAEED5A1E1EBF21004ABFAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FilterDialog/Assets.xcassets; sourceTree = "<group>"; };
-		AAAEED5F1E1EBF21004ABFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		AAAEED611E1EBF21004ABFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = FilterDialog/Info.plist; sourceTree = "<group>"; };
+		AAAEED561E1EBF21004ABFAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AAAEED571E1EBF21004ABFAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAAEED611E1EBF21004ABFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAAEED671E1EBF41004ABFAE /* EJVFilterListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVFilterListWindowController.h; sourceTree = "<group>"; };
 		AAAEED681E1EBF41004ABFAE /* EJVFilterListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVFilterListWindowController.m; sourceTree = "<group>"; };
 		AAAEED691E1EBF41004ABFAE /* EJVFilterListWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EJVFilterListWindowController.xib; sourceTree = "<group>"; };
@@ -40,9 +38,11 @@
 		AAAEED6F1E1EBF41004ABFAE /* EJVTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableView.m; sourceTree = "<group>"; };
 		AAAEED701E1EBF41004ABFAE /* EJVTableRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EJVTableRowView.h; sourceTree = "<group>"; };
 		AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableRowView.m; sourceTree = "<group>"; };
-		AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableCell.xib; path = FilterDialog/TableCell.xib; sourceTree = "<group>"; };
-		AAAEEDD51E1F81BC004ABFAE /* EJVHighlightingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EJVHighlightingTextField.h; path = HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.h; sourceTree = "<group>"; };
-		AAAEEDD61E1F81BC004ABFAE /* EJVHighlightingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EJVHighlightingTextField.m; path = HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.m; sourceTree = "<group>"; };
+		AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		AAAEEDD91E1FB687004ABFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AAAEEDDB1E1FB736004ABFAE /* EJVHighlightingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EJVHighlightingTextField.h; path = HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.h; sourceTree = SOURCE_ROOT; };
+		AAAEEDDC1E1FB736004ABFAE /* EJVHighlightingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EJVHighlightingTextField.m; path = HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.m; sourceTree = SOURCE_ROOT; };
+		AAAEEDDE1E1FB77D004ABFAE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,37 +91,21 @@
 			path = FilterDialog;
 			sourceTree = "<group>";
 		};
-		AAAEED591E1EBF21004ABFAE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAAEED5A1E1EBF21004ABFAE /* main.m */,
-			);
-			name = "Supporting Files";
-			path = FilterDialog;
-			sourceTree = "<group>";
-		};
 		AAAEED781E1EBF4A004ABFAE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				AAAEEDD41E1F818B004ABFAE /* HighlightingTextField */,
+				AAAEEDDB1E1FB736004ABFAE /* EJVHighlightingTextField.h */,
+				AAAEEDDC1E1FB736004ABFAE /* EJVHighlightingTextField.m */,
 				AAAEED561E1EBF21004ABFAE /* AppDelegate.h */,
 				AAAEED571E1EBF21004ABFAE /* AppDelegate.m */,
-				AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */,
-				AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */,
 				AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */,
+				AAAEEDD81E1FB687004ABFAE /* MainMenu.xib */,
+				AAAEED5C1E1EBF21004ABFAE /* Assets.xcassets */,
+				AAAEEDDE1E1FB77D004ABFAE /* main.m */,
 				AAAEED611E1EBF21004ABFAE /* Info.plist */,
-				AAAEED591E1EBF21004ABFAE /* Supporting Files */,
 			);
 			name = Demo;
-			sourceTree = "<group>";
-		};
-		AAAEEDD41E1F818B004ABFAE /* HighlightingTextField */ = {
-			isa = PBXGroup;
-			children = (
-				AAAEEDD51E1F81BC004ABFAE /* EJVHighlightingTextField.h */,
-				AAAEEDD61E1F81BC004ABFAE /* EJVHighlightingTextField.m */,
-			);
-			name = HighlightingTextField;
+			path = FilterDialog/Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +170,7 @@
 				AAAEED731E1EBF41004ABFAE /* EJVFilterListWindowController.xib in Resources */,
 				AAAEED5D1E1EBF21004ABFAE /* Assets.xcassets in Resources */,
 				AAAEED8C1E1EC4B7004ABFAE /* TableCell.xib in Resources */,
-				AAAEED601E1EBF21004ABFAE /* MainMenu.xib in Resources */,
+				AAAEEDDA1E1FB687004ABFAE /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAAEED721E1EBF41004ABFAE /* EJVFilterListWindowController.m in Sources */,
-				AAAEEDD71E1F81BC004ABFAE /* EJVHighlightingTextField.m in Sources */,
+				AAAEEDDD1E1FB736004ABFAE /* EJVHighlightingTextField.m in Sources */,
 				AAAEED771E1EBF41004ABFAE /* EJVTableRowView.m in Sources */,
 				AAAEED761E1EBF41004ABFAE /* EJVTableView.m in Sources */,
-				AAAEED5B1E1EBF21004ABFAE /* main.m in Sources */,
 				AAAEED751E1EBF41004ABFAE /* EJVSearchField.m in Sources */,
 				AAAEED741E1EBF41004ABFAE /* EJVSearchPanel.m in Sources */,
+				AAAEEDDF1E1FB77D004ABFAE /* main.m in Sources */,
 				AAAEED581E1EBF21004ABFAE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,13 +195,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AAAEED5E1E1EBF21004ABFAE /* MainMenu.xib */ = {
+		AAAEEDD81E1FB687004ABFAE /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AAAEED5F1E1EBF21004ABFAE /* Base */,
+				AAAEEDD91E1FB687004ABFAE /* Base */,
 			);
 			name = MainMenu.xib;
-			path = FilterDialog;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,7 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = LDTRPGZ338;
-				INFOPLIST_FILE = FilterDialog/Info.plist;
+				INFOPLIST_FILE = FilterDialog/Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ejv.FilterDialog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = LDTRPGZ338;
-				INFOPLIST_FILE = FilterDialog/Info.plist;
+				INFOPLIST_FILE = FilterDialog/Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ejv.FilterDialog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
