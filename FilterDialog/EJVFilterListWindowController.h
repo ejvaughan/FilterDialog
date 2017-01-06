@@ -21,6 +21,9 @@ extern NSString * const kEJVFilterListPredicateSubstitutionVariableName;
 // Default value: 44.0
 @property (nonatomic) CGFloat rowHeight;
 
+// KVO observable
+@property (nonatomic, readonly) NSString *searchText;
+
 @property (nullable, weak) id target;
 @property (nullable) SEL selectionCommittedAction;
 

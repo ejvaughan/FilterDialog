@@ -341,6 +341,7 @@
 				AAAEED661E1EBF21004ABFAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

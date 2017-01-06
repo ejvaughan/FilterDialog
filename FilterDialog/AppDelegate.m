@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EJVFilterListWindowController.h"
+//#import "EJVHighlightingTextField.h"
 
 @interface AppDelegate ()
 
@@ -53,9 +54,16 @@
          NSArray *views = nil;
          [nib instantiateWithOwner:nil topLevelObjects:&views];
          
-         return views[[views indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+         NSTableCellView *view = views[[views indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
              return [obj isKindOfClass:[NSTableCellView class]];
          }]];
+         
+//         [view.textField bind:@"searchString"
+//                     toObject:self.filterDialog
+//                  withKeyPath:@"searchText"
+//                      options:nil];
+         
+         return view;
      }];
 }
 

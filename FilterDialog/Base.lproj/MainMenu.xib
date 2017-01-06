@@ -703,5 +703,6 @@
                 </subviews>
             </view>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="hiv-IO-2Js"/>
     </objects>
 </document>

@@ -104,6 +104,11 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 #pragma mark - Search field
 
+- (NSString *)searchText
+{
+    return self.searchField.stringValue;
+}
+
 - (void)updateFilterPredicateForText:(NSString *)text
 {
     self.arrayController.filterPredicate = ([text length] == 0) ? nil :
@@ -112,6 +117,9 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 - (IBAction)searchFieldTextDidChange:(NSSearchField *)sender
 {
+    [self willChangeValueForKey:@"searchText"];
+    [self didChangeValueForKey:@"searchText"];
+    
     [self updateFilterPredicateForText:sender.stringValue];
 }
 
