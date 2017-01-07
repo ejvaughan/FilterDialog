@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
                    filterPredicateBlock:(NSPredicate *(^)(NSString * searchText))filterPredicateBlock
-                          cellViewBlock:(NSTableCellView *(^)(NSTableCellView * _Nullable reusingView, id object))cellViewBlock;
+                          cellViewBlock:(NSTableCellView *(^)(EJVFilterListWindowController * dialog, NSTableCellView * _Nullable reusingView, id object))cellViewBlock;
 
 // Default value: 44.0
 @property (nonatomic) CGFloat rowHeight;

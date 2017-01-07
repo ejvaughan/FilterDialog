@@ -43,7 +43,7 @@
          }];
          return [NSPredicate predicateWithFormat:@"self like[cd] %@", fuzzySearch];
      }
-     cellViewBlock:^NSTableCellView * _Nonnull(NSTableCellView * _Nullable reusingView, id  _Nonnull object) {
+     cellViewBlock:^NSTableCellView * _Nonnull(EJVFilterListWindowController *dialog, NSTableCellView * _Nullable reusingView, id  _Nonnull object) {
          if (reusingView) {
              return reusingView;
          }

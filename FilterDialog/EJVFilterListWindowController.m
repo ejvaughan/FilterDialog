@@ -19,7 +19,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 @property (weak) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
 
 @property (strong) NSArrayController *arrayController;
-@property (strong) NSTableCellView *(^cellViewBlock)(NSTableCellView *, id);
+@property (strong) NSTableCellView *(^cellViewBlock)(EJVFilterListWindowController *, NSTableCellView *, id);
 @property (strong) NSPredicate *(^filterPredicateBlock)(NSString *);
 
 @end
@@ -28,7 +28,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
                    filterPredicateBlock:(NSPredicate *(^)(NSString *searchText))filterPredicateBlock
-                          cellViewBlock:(NSTableCellView *(^)(NSTableCellView *reusingView, id object))cellViewBlock
+                          cellViewBlock:(NSTableCellView *(^)(EJVFilterListWindowController *dialog, NSTableCellView *reusingView, id object))cellViewBlock
 {
     self = [super initWithWindowNibName:@"EJVFilterListWindowController"];
     
@@ -158,7 +158,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 {
     NSTableCellView *cell = [tableView makeViewWithIdentifier:tableColumn.identifier owner:nil];
     id object = [self.arrayController.arrangedObjects objectAtIndex:row];
-    cell = self.cellViewBlock(cell, object);
+    cell = self.cellViewBlock(self, cell, object);
     
     // Set the reuse identifier
     cell.identifier = tableColumn.identifier;
