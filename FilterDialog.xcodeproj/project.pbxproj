@@ -40,8 +40,8 @@
 		AAAEED711E1EBF41004ABFAE /* EJVTableRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJVTableRowView.m; sourceTree = "<group>"; };
 		AAAEED8B1E1EC4B7004ABFAE /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		AAAEEDD91E1FB687004ABFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		AAAEEDDB1E1FB736004ABFAE /* EJVHighlightingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EJVHighlightingTextField.h; path = HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.h; sourceTree = SOURCE_ROOT; };
-		AAAEEDDC1E1FB736004ABFAE /* EJVHighlightingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EJVHighlightingTextField.m; path = HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.m; sourceTree = SOURCE_ROOT; };
+		AAAEEDDB1E1FB736004ABFAE /* EJVHighlightingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EJVHighlightingTextField.h; path = FilterDialog/Demo/HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.h; sourceTree = SOURCE_ROOT; };
+		AAAEEDDC1E1FB736004ABFAE /* EJVHighlightingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EJVHighlightingTextField.m; path = FilterDialog/Demo/HighlightingTextField/HighlightingTextField/EJVHighlightingTextField.m; sourceTree = SOURCE_ROOT; };
 		AAAEEDDE1E1FB77D004ABFAE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
