@@ -209,6 +209,10 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
                        context:(void *)context
 {
     if (object == self.arrayController) {
+        if ([self.arrayController.arrangedObjects count] > 0) {
+            [self.arrayController setSelectionIndex:0];
+        }
+        
         [self recomputeHeightConstraint];
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
