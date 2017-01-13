@@ -112,7 +112,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
     self.arrayController.filterPredicate = ([text length] == 0) ? nil : self.filterPredicateBlock(text);
 }
 
-- (IBAction)searchFieldTextDidChange:(NSSearchField *)sender
+- (IBAction)searchFieldTextDidChange:(NSTextField *)sender
 {
     [self willChangeValueForKey:@"searchText"];
     [self didChangeValueForKey:@"searchText"];

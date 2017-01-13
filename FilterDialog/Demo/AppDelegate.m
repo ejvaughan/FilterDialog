@@ -27,11 +27,12 @@
     self.stuff = @[ @"Hello", @"Foo", @"Bar", @"Baz", @"World" ];
     
     // Create the array controller that will supply data to the filter dialog
-    self.arrayController = [[NSArrayController alloc] init];
-    [self.arrayController bind:NSContentArrayBinding
-                      toObject:self
-                   withKeyPath:@"stuff"
-                       options:nil];
+    self.arrayController = [[NSArrayController alloc] initWithContent:self.stuff];
+    
+    [self.arrayController addObserver:self
+                           forKeyPath:@"selectionIndexes"
+                              options:0
+                              context:nil];
     
     self.filterDialog =
     [[EJVFilterListWindowController alloc]
@@ -57,6 +58,8 @@
              return [obj isKindOfClass:[NSTableCellView class]];
          }]];
          
+         // The reason we don't utilize the textField outlet of NSTableCellView is because
+         // the table view's source list style will muck with the text field's text attributes
          EJVHighlightingTextField *textField = [view viewWithTag:1000];
          textField.underlineMatches = YES;
          
@@ -84,6 +87,18 @@
 - (IBAction)openDialog:(id)sender
 {
     [self.filterDialog.window makeKeyAndOrderFront:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary<NSKeyValueChangeKey,id> *)change
+                       context:(void *)context
+{
+    if (object == self.arrayController) {
+        if ([self.arrayController.selectionIndexes count] > 0) {
+            NSLog(@"Hot item: %@", [self.arrayController.arrangedObjects objectAtIndex:self.arrayController.selectionIndex]);
+        }
+    }
 }
 
 @end
