@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 // Default value: 44.0
 @property (nonatomic) CGFloat rowHeight;
 
+// If set, the search text will be cleared whenever the dialog is dismissed (whether by committing a selection, or not)
+// Defaults to NO
+@property (nonatomic) BOOL clearsSearchTextOnDismiss;
+
 // KVO observable
 @property (nonatomic, readonly) NSString *searchText;
 

@@ -97,7 +97,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 
 - (void)windowDidResignKey:(NSNotification *)notification;
 {
-    [self.window orderOut:nil];
+    [self dismiss];
 }
 
 #pragma mark - Search field
@@ -141,7 +141,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
         
         return YES;
     } else if (commandSelector == @selector(cancelOperation:)) {
-        [self.window orderOut:nil];
+        [self dismiss];
         
         return YES;
     }
@@ -184,7 +184,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 - (void)commitSelectionForRow:(NSInteger)rowIndex
 {
     [NSApp sendAction:self.selectionCommittedAction to:self.target from:self];
-    [self.window orderOut:nil];
+    [self dismiss];
 }
 
 - (void)setRowHeight:(CGFloat)rowHeight
@@ -217,6 +217,16 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+
+- (void)dismiss
+{
+    if (self.clearsSearchTextOnDismiss) {
+        self.searchField.stringValue = @"";
+        [self searchFieldTextDidChange:self.searchField];
+    }
+    
+    [self.window orderOut:nil];
 }
 
 @end

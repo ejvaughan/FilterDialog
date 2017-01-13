@@ -68,6 +68,7 @@
          return view;
      }];
     
+    self.filterDialog.clearsSearchTextOnDismiss = YES;
     self.filterDialog.target = self;
     self.filterDialog.selectionCommittedAction = @selector(filterDialogDidSelectRow:);
 }
