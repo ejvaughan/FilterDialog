@@ -10,6 +10,11 @@
 
 @implementation EJVTableRowView
 
+- (NSBackgroundStyle)interiorBackgroundStyle
+{
+    return (self.isSelected) ? NSBackgroundStyleDark : NSBackgroundStyleLight;
+}
+
 // Draw a nice separator
 
 - (void)drawSeparatorInRect:(NSRect)dirtyRect
