@@ -18,7 +18,6 @@
     
     if (self) {
         self.backgroundColor = [NSColor clearColor];
-        self.opaque = NO;
     }
     
     return self;
@@ -30,7 +29,7 @@
 {
     aView.wantsLayer            = YES;
     aView.layer.frame           = aView.frame;
-    aView.layer.cornerRadius    = 10.0;
+    aView.layer.cornerRadius    = 6.0;
     aView.layer.masksToBounds   = YES;
     aView.layer.backgroundColor = [NSColor windowBackgroundColor].CGColor;
     
