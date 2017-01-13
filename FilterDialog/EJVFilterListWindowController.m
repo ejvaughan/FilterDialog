@@ -107,17 +107,19 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
     return self.searchField.stringValue;
 }
 
-- (void)updateFilterPredicateForText:(NSString *)text
-{
-    self.arrayController.filterPredicate = ([text length] == 0) ? nil : self.filterPredicateBlock(text);
-}
-
 - (IBAction)searchFieldTextDidChange:(NSTextField *)sender
 {
+    NSString *text = sender.stringValue;
+    
     [self willChangeValueForKey:@"searchText"];
     [self didChangeValueForKey:@"searchText"];
     
-    [self updateFilterPredicateForText:sender.stringValue];
+    self.arrayController.filterPredicate = ([text length] == 0) ? nil : self.filterPredicateBlock(text);
+    
+    // Reset the selection to the first item
+    if ([self.arrayController.arrangedObjects count] > 0) {
+        [self.arrayController setSelectionIndex:0];
+    }
 }
 
 - (BOOL)control:(NSControl *)control textView:(NSTextView *)textView doCommandBySelector:(SEL)commandSelector
@@ -209,6 +211,7 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
                        context:(void *)context
 {
     if (object == self.arrayController) {
+        // When the arranged objects changes, reset the selection
         if ([self.arrayController.arrangedObjects count] > 0) {
             [self.arrayController setSelectionIndex:0];
         }
