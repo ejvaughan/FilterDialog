@@ -19,20 +19,17 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="SR7-6p-VNw" customClass="EJVSearchPanel">
             <windowStyleMask key="styleMask" utility="YES" nonactivatingPanel="YES"/>
             <windowPositionMask key="initialPositionMask" topStrut="YES"/>
-            <rect key="contentRect" x="167" y="750" width="450" height="39"/>
+            <rect key="contentRect" x="167" y="750" width="450" height="31"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="T0x-ps-wgZ">
-                <rect key="frame" x="0.0" y="0.0" width="450" height="39"/>
+                <rect key="frame" x="0.0" y="0.0" width="450" height="31"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Ick-rh-hUJ">
-                        <rect key="frame" x="0.0" y="-1" width="450" height="40"/>
+                        <rect key="frame" x="0.0" y="-1" width="450" height="32"/>
                         <subviews>
                             <searchField wantsLayer="YES" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="59L-OU-Q0Z" customClass="EJVSearchField">
-                                <rect key="frame" x="5" y="5" width="440" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hI6-Ai-JfD"/>
-                                </constraints>
+                                <rect key="frame" x="5" y="5" width="440" height="22"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" usesSingleLineMode="YES" bezelStyle="round" sendsSearchStringImmediately="YES" id="ZCu-BZ-b3d">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -57,7 +54,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="B1f-rj-RLY" customClass="EJVTableView">
-                                    <rect key="frame" x="0.0" y="0.0" width="452" height="1"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="452" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>

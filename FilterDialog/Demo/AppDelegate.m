@@ -57,9 +57,10 @@
              return [obj isKindOfClass:[NSTableCellView class]];
          }]];
          
-         ((EJVHighlightingTextField *)view.textField).underlineMatches = YES;
+         EJVHighlightingTextField *textField = [view viewWithTag:1000];
+         textField.underlineMatches = YES;
          
-         [view.textField bind:@"searchString"
+         [textField bind:@"searchString"
                      toObject:self.filterDialog
                   withKeyPath:@"searchText"
                       options:nil];
