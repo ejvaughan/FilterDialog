@@ -222,15 +222,15 @@ static NSString * const kFilterListCellIdentifier = @"FilterListCell";
 - (void)dismiss
 {
     if (self.window.isVisible) {
-        if (self.clearsSearchTextOnDismiss) {
-            self.searchField.stringValue = @"";
-            [self searchFieldTextDidChange:self.searchField];
-        }
-        
         [self.window orderOut:nil];
         
         if (self.delegate != nil && [self.delegate conformsToProtocol:@protocol(EJVFilterListWindowControllerDelegate)]) {
             [self.delegate filterListWindowControllerDidDismiss:self];
+        }
+        
+        if (self.clearsSearchTextOnDismiss) {
+            self.searchField.stringValue = @"";
+            [self searchFieldTextDidChange:self.searchField];
         }
     }
 }
