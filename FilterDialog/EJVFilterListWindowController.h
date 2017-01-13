@@ -10,11 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class EJVFilterListWindowController;
+
+@protocol EJVFilterListWindowControllerDelegate <NSObject>
+
+- (void)filterListWindowControllerDidDismiss:(EJVFilterListWindowController *)dialog;
+
+@end
+
 @interface EJVFilterListWindowController : NSWindowController
 
 - (instancetype)initWithArrayController:(NSArrayController *)controller
                    filterPredicateBlock:(NSPredicate *(^)(NSString * searchText))filterPredicateBlock
                           cellViewBlock:(NSTableCellView *(^)(EJVFilterListWindowController * dialog, NSTableCellView * _Nullable reusingView, id object))cellViewBlock;
+
+// Optional delegate that will be notified when the dialog is dismissed
+@property (nonatomic, weak) id <EJVFilterListWindowControllerDelegate> delegate;
 
 // Default value: 44.0
 @property (nonatomic) CGFloat rowHeight;

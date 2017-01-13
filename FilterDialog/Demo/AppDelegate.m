@@ -10,7 +10,7 @@
 #import "EJVFilterListWindowController.h"
 #import "EJVHighlightingTextField.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <EJVFilterListWindowControllerDelegate>
 
 @property (weak) IBOutlet NSWindow *window;
 @property (strong) NSArray<NSString *> *stuff;
@@ -72,6 +72,7 @@
      }];
     
     self.filterDialog.clearsSearchTextOnDismiss = YES;
+    self.filterDialog.delegate = self;
     self.filterDialog.target = self;
     self.filterDialog.selectionCommittedAction = @selector(filterDialogDidSelectRow:);
 }
@@ -99,6 +100,11 @@
             NSLog(@"Hot item: %@", [self.arrayController.arrangedObjects objectAtIndex:self.arrayController.selectionIndex]);
         }
     }
+}
+
+- (void)filterListWindowControllerDidDismiss:(EJVFilterListWindowController *)dialog
+{
+    NSLog(@"Dialog dismissed");
 }
 
 @end
