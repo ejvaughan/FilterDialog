@@ -7,6 +7,7 @@
 //
 
 #import "EJVSearchPanel.h"
+#import "EJVFilterListWindowController.h"
 
 @implementation EJVSearchPanel
 
@@ -43,6 +44,23 @@
 - (BOOL)canBecomeKeyWindow
 {
     return YES;
+}
+    
+- (BOOL)validateMenuItem:(NSMenuItem *)menuItem
+{
+    if (menuItem.action == @selector(performClose:)) {
+        if ([((EJVFilterListWindowController *)self.windowController).delegate respondsToSelector:@selector(filterListWindowControllerHandleCloseAction:)]) {
+            return YES;
+        }
+    }
+    
+    return [super validateMenuItem:menuItem];
+}
+
+- (void)performClose:(id)sender
+{
+    EJVFilterListWindowController *controller = (EJVFilterListWindowController *)self.windowController;
+    [controller.delegate filterListWindowControllerHandleCloseAction:controller];
 }
 
 @end

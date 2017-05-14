@@ -15,6 +15,12 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol EJVFilterListWindowControllerDelegate <NSObject>
 
 - (void)filterListWindowControllerDidDismiss:(EJVFilterListWindowController *)dialog;
+    
+@optional
+    
+// By default, the filter dialog does not respond to the close action (⌘-W). However, implementing this method gives the
+// delegate the opportunity to perform a custom action in response to the close command (e.g. actually closing the dialog)
+- (void)filterListWindowControllerHandleCloseAction:(EJVFilterListWindowController *)controller;
 
 @end
 
@@ -39,6 +45,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, weak) id target;
 @property (nullable) SEL selectionCommittedAction;
+    
+// Dismisses the dialog
+- (void)dismiss;
 
 @end
 

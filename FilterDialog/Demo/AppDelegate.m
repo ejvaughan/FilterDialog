@@ -106,5 +106,12 @@
 {
     NSLog(@"Dialog dismissed");
 }
+    
+- (void)filterListWindowControllerHandleCloseAction:(EJVFilterListWindowController *)controller
+{
+    NSLog(@"Close action performed");
+    
+    // [controller dismiss];
+}
 
 @end
